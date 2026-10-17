@@ -1,0 +1,195 @@
+{
+  "Records": [
+    {
+      "eventTime": "2026-10-16T08:01:12Z",
+      "eventSource": "signin.amazonaws.com",
+      "eventName": "ConsoleLogin",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "198.51.100.10",
+      "userIdentity": {"type": "IAMUser", "userName": "alice", "arn": "arn:aws:iam::123456789012:user/alice"},
+      "responseElements": {"ConsoleLogin": "Success"},
+      "additionalEventData": {"MFAUsed": "Yes"}
+    },
+    {
+      "eventTime": "2026-10-16T08:15:40Z",
+      "eventSource": "s3.amazonaws.com",
+      "eventName": "ListBuckets",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "198.51.100.10",
+      "userIdentity": {"type": "IAMUser", "userName": "alice", "arn": "arn:aws:iam::123456789012:user/alice"}
+    },
+    {
+      "eventTime": "2026-10-16T08:30:05Z",
+      "eventSource": "ec2.amazonaws.com",
+      "eventName": "DescribeInstances",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "198.51.100.10",
+      "userIdentity": {"type": "IAMUser", "userName": "alice", "arn": "arn:aws:iam::123456789012:user/alice"}
+    },
+    {
+      "eventTime": "2026-10-16T09:02:11Z",
+      "eventSource": "signin.amazonaws.com",
+      "eventName": "ConsoleLogin",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "198.51.100.11",
+      "userIdentity": {"type": "IAMUser", "userName": "bob", "arn": "arn:aws:iam::123456789012:user/bob"},
+      "responseElements": {"ConsoleLogin": "Success"},
+      "additionalEventData": {"MFAUsed": "Yes"}
+    },
+    {
+      "eventTime": "2026-10-16T09:20:30Z",
+      "eventSource": "s3.amazonaws.com",
+      "eventName": "GetObject",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "198.51.100.11",
+      "userIdentity": {"type": "IAMUser", "userName": "bob", "arn": "arn:aws:iam::123456789012:user/bob"},
+      "requestParameters": {"bucketName": "realone-reports", "key": "weekly/summary.pdf"}
+    },
+    {
+      "eventTime": "2026-10-16T09:40:00Z",
+      "eventSource": "signin.amazonaws.com",
+      "eventName": "ConsoleLogin",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "198.51.100.12",
+      "userIdentity": {"type": "IAMUser", "userName": "dave", "arn": "arn:aws:iam::123456789012:user/dave"},
+      "responseElements": {"ConsoleLogin": "Failure"},
+      "additionalEventData": {"MFAUsed": "No"},
+      "errorMessage": "Failed authentication"
+    },
+    {
+      "eventTime": "2026-10-16T09:45:02Z",
+      "eventSource": "signin.amazonaws.com",
+      "eventName": "ConsoleLogin",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "198.51.100.13",
+      "userIdentity": {"type": "IAMUser", "userName": "carol", "arn": "arn:aws:iam::123456789012:user/carol"},
+      "responseElements": {"ConsoleLogin": "Success"},
+      "additionalEventData": {"MFAUsed": "No"}
+    },
+    {
+      "eventTime": "2026-10-16T10:05:00Z",
+      "eventSource": "signin.amazonaws.com",
+      "eventName": "ConsoleLogin",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "203.0.113.50",
+      "userIdentity": {"type": "IAMUser", "userName": "admin", "arn": "arn:aws:iam::123456789012:user/admin"},
+      "responseElements": {"ConsoleLogin": "Failure"},
+      "additionalEventData": {"MFAUsed": "No"},
+      "errorMessage": "Failed authentication"
+    },
+    {
+      "eventTime": "2026-10-16T10:05:20Z",
+      "eventSource": "signin.amazonaws.com",
+      "eventName": "ConsoleLogin",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "203.0.113.50",
+      "userIdentity": {"type": "IAMUser", "userName": "admin", "arn": "arn:aws:iam::123456789012:user/admin"},
+      "responseElements": {"ConsoleLogin": "Failure"},
+      "additionalEventData": {"MFAUsed": "No"},
+      "errorMessage": "Failed authentication"
+    },
+    {
+      "eventTime": "2026-10-16T10:05:41Z",
+      "eventSource": "signin.amazonaws.com",
+      "eventName": "ConsoleLogin",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "203.0.113.50",
+      "userIdentity": {"type": "IAMUser", "userName": "admin", "arn": "arn:aws:iam::123456789012:user/admin"},
+      "responseElements": {"ConsoleLogin": "Failure"},
+      "additionalEventData": {"MFAUsed": "No"},
+      "errorMessage": "Failed authentication"
+    },
+    {
+      "eventTime": "2026-10-16T10:06:03Z",
+      "eventSource": "signin.amazonaws.com",
+      "eventName": "ConsoleLogin",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "203.0.113.50",
+      "userIdentity": {"type": "IAMUser", "userName": "admin", "arn": "arn:aws:iam::123456789012:user/admin"},
+      "responseElements": {"ConsoleLogin": "Failure"},
+      "additionalEventData": {"MFAUsed": "No"},
+      "errorMessage": "Failed authentication"
+    },
+    {
+      "eventTime": "2026-10-16T10:06:30Z",
+      "eventSource": "signin.amazonaws.com",
+      "eventName": "ConsoleLogin",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "203.0.113.50",
+      "userIdentity": {"type": "IAMUser", "userName": "admin", "arn": "arn:aws:iam::123456789012:user/admin"},
+      "responseElements": {"ConsoleLogin": "Success"},
+      "additionalEventData": {"MFAUsed": "No"}
+    },
+    {
+      "eventTime": "2026-10-16T10:08:15Z",
+      "eventSource": "iam.amazonaws.com",
+      "eventName": "CreateAccessKey",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "203.0.113.50",
+      "userIdentity": {"type": "IAMUser", "userName": "admin", "arn": "arn:aws:iam::123456789012:user/admin"},
+      "requestParameters": {"userName": "admin"}
+    },
+    {
+      "eventTime": "2026-10-16T10:09:02Z",
+      "eventSource": "iam.amazonaws.com",
+      "eventName": "AttachUserPolicy",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "203.0.113.50",
+      "userIdentity": {"type": "IAMUser", "userName": "admin", "arn": "arn:aws:iam::123456789012:user/admin"},
+      "requestParameters": {"userName": "backup-svc", "policyArn": "arn:aws:iam::aws:policy/AdministratorAccess"}
+    },
+    {
+      "eventTime": "2026-10-16T10:12:44Z",
+      "eventSource": "s3.amazonaws.com",
+      "eventName": "PutBucketPolicy",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "203.0.113.50",
+      "userIdentity": {"type": "IAMUser", "userName": "admin", "arn": "arn:aws:iam::123456789012:user/admin"},
+      "requestParameters": {
+        "bucketName": "realone-reports",
+        "bucketPolicy": {
+          "Version": "2012-10-17",
+          "Statement": [
+            {"Sid": "OpenToAll", "Effect": "Allow", "Principal": "*", "Action": "s3:GetObject", "Resource": "arn:aws:s3:::realone-reports/*"}
+          ]
+        }
+      }
+    },
+    {
+      "eventTime": "2026-10-16T10:15:30Z",
+      "eventSource": "cloudtrail.amazonaws.com",
+      "eventName": "StopLogging",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "203.0.113.50",
+      "userIdentity": {"type": "IAMUser", "userName": "admin", "arn": "arn:aws:iam::123456789012:user/admin"},
+      "requestParameters": {"name": "realone-trail"}
+    },
+    {
+      "eventTime": "2026-10-16T11:00:00Z",
+      "eventSource": "s3.amazonaws.com",
+      "eventName": "PutBucketPolicy",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "198.51.100.10",
+      "userIdentity": {"type": "IAMUser", "userName": "alice", "arn": "arn:aws:iam::123456789012:user/alice"},
+      "requestParameters": {
+        "bucketName": "realone-internal",
+        "bucketPolicy": {
+          "Version": "2012-10-17",
+          "Statement": [
+            {"Sid": "AccountOnly", "Effect": "Allow", "Principal": {"AWS": "arn:aws:iam::123456789012:root"}, "Action": "s3:GetObject", "Resource": "arn:aws:s3:::realone-internal/*"}
+          ]
+        }
+      }
+    },
+    {
+      "eventTime": "2026-10-16T14:30:00Z",
+      "eventSource": "signin.amazonaws.com",
+      "eventName": "ConsoleLogin",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "198.51.100.10",
+      "userIdentity": {"type": "Root", "principalId": "123456789012", "arn": "arn:aws:iam::123456789012:root", "accountId": "123456789012"},
+      "responseElements": {"ConsoleLogin": "Success"},
+      "additionalEventData": {"MFAUsed": "Yes"}
+    }
+  ]
+}
