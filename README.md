@@ -6,7 +6,6 @@ A small, readable detector that scans AWS CloudTrail-style audit logs and flags 
 
 ```bash
 python3 detector.py sample_logs.json
-```
 
 More options:
 
@@ -40,7 +39,6 @@ The exit code is `1` when any finding is at or above `--fail-on` (default `high`
 
 ```bash
 python3 -m unittest -v
-```
 
 19 tests cover each rule, the clean cases above, unordered input and exit codes.
 
@@ -53,3 +51,31 @@ python3 -m unittest -v
 - Point it at real CloudTrail logs from a free-tier account (the AWS lab, later)
 - Add a rule for logins from a new country or IP range
 - Output a markdown incident report
+## How I built it
+
+This is part of a 30-day challenge to learn cloud security by building in public. I wrote the code together with Claude, an AI assistant ("vibecoding"). [[One or two sentences on your part: what you decided, what you ran or checked yourself.]]
+
+## What it does
+
+It reads AWS CloudTrail-style audit logs and flags seven kinds of suspicious activity: root logins, logins without MFA, brute-force attempts (and a successful login right after them), risky IAM changes, buckets opened to everyone, and anyone switching off logging. It's pure Python with no extra packages, and it runs on the sample logs, so no cloud account is needed.
+
+## The sample attack
+
+`sample_logs.json` has 18 events, including one simulated attack. A stranger fails to log in four times from one IP, then gets in, creates an access key, gives another user admin rights, opens a bucket to the whole internet, and finally turns off logging. The detector reports 9 findings in time order, with severity levels, and the 19 tests check each rule.
+
+## Choices to avoid false alarms
+
+- The no-MFA rule only checks IAM users, because federated and SSO logins don't report MFA the same way.
+- A bucket policy open to everyone is not flagged if it has a condition attached, such as being limited to one VPC endpoint.
+- A single failed login is normal and is ignored. It takes three or more from one IP in a short time to count as brute force.
+
+## One thing that went wrong
+
+When I first ran the tests, one failed. The test said the sample file should contain 19 events, but it has 18. The detector was right and the test was wrong. The lesson: when a test fails, check whether the code or the test is at fault before changing anything.
+
+## What I learned
+how to vibe code and have few ideas about what to do in my next project
+
+## Limits
+
+It has only been run on sample data, not real production logs. The rules are simple thresholds, and it only understands AWS-style logs.
