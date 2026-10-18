@@ -53,7 +53,7 @@ python3 -m unittest -v
 - Output a markdown incident report
 ## How I built it
 
-This is part of a 30-day challenge to learn cloud security by building in public. I wrote the code together with Claude, an AI assistant ("vibecoding"). [[One or two sentences on your part: what you decided, what you ran or checked yourself.]]
+This is part of a 30-day challenge to learn cloud security by building in public. I wrote the code together with Claude, Vibecoding to get better and know how my next project will be more better
 
 ## What it does
 
